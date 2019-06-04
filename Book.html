@@ -21,7 +21,7 @@
 	<!-- One -->
 	<section id="one" class="main style2">
 		<div class="container">
-			<form name="FormInput" method="POST" data-netlify="true">
+			<form action="DataOutput.php" method="get">
 			Name Of Book: <input type="text" name="NameOfBook" placeholder="Name Of Book"><br>
 			Reader: <input type="text" name="Reader" placeholder="Reader"><br>
 			<input type="submit" value="Submit">
@@ -32,6 +32,7 @@
 	<!-- Three -->
 	<section id="three" class="main style1">
 		<div class="container">
+			<h2> Chart Last Updated: 4/6/19 at 22:22</h2>
 		  <canvas id="myChart"></canvas>
 		</div>
 
@@ -50,8 +51,8 @@
 		      datasets:[{
 		        label:'',
 		        data:[
-		          5,
-							20
+		          0,
+							0
 		        ],
 		        //backgroundColor:'green',
 		        backgroundColor:[
@@ -92,18 +93,6 @@
 		    }
 		  });
 		</script>
-	</section>
-
-	<!-- Four -->
-	<section id="four" class="main style1 special">
-		<div class="container">
-			<header class="major">
-				<h2>Contact Me</h2>
-			</header>
-			<ul class="actions special">
-				<li><a href="mailto:ben_townsend@ntlworld.com"  class="button wide primary">Email</a></li>
-			</ul>
-		</div>
 	</section>
 
 	<!-- Footer -->
