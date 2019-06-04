@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Reading Challenge</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+</head>
+<body>
+	<section id="header">
+		<div class="inner">
+			<span class="icon major fa-book"></span>
+			<h1><strong>Reading Challenge</strong></h1>
+			<ul class="actions special">
+				<li><a href="#one" class="button scrolly">Continue</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- One -->
+	<section id="one" class="main style2">
+		<div class="container">
+			<form action="DataOutput.php" method="get">
+			Name Of Book: <input type="text" name="NameOfBook" placeholder="Name Of Book"><br>
+			Reader: <input type="text" name="Reader" placeholder="Reader"><br>
+			<input type="submit" value="Submit">
+			</form>
+		</div>
+	</section>
+
+	<!-- Three -->
+	<section id="three" class="main style1">
+		<div class="container">
+		  <canvas id="myChart"></canvas>
+		</div>
+
+		<script>
+		  let myChart = document.getElementById('myChart').getContext('2d');
+
+		  // Global Options
+		  Chart.defaults.global.defaultFontFamily = 'Lato';
+		  Chart.defaults.global.defaultFontSize = 18;
+		  Chart.defaults.global.defaultFontColor = 'black';
+
+		  let massPopChart = new Chart(myChart, {
+		    type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		    data:{
+		      labels:['Ben', 'Abi'],
+		      datasets:[{
+		        label:'',
+		        data:[
+		          5,
+							20
+		        ],
+		        //backgroundColor:'green',
+		        backgroundColor:[
+		          'red',
+							'blue'
+		        ],
+		        borderWidth:1,
+		        borderColor:'black',
+		        hoverBorderWidth:3,
+		        hoverBorderColor:'black'
+		      }]
+		    },
+		    options:{
+		      title:{
+		        display:true,
+		        text:'Books Read',
+		        fontSize:25,
+						fontColor: 'black'
+		      },
+		      legend:{
+		        display:false,
+		        position:'right',
+		        labels:{
+		          fontColor:'black'
+		        }
+		      },
+		      layout:{
+		        padding:{
+		          left:50,
+		          right:0,
+		          bottom:0,
+		          top:0
+		        }
+		      },
+		      tooltips:{
+		        enabled:true
+		      }
+		    }
+		  });
+		</script>
+	</section>
+
+	<!-- Four -->
+	<section id="four" class="main style1 special">
+		<div class="container">
+			<header class="major">
+				<h2>Contact Me</h2>
+			</header>
+			<ul class="actions special">
+				<li><a href="mailto:ben_townsend@ntlworld.com"  class="button wide primary">Email</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="https://github.com/TF997" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+			<li><a href="https://www.linkedin.com/in/ben-townsend-6496a7173/" class="icon alt fa-linkedin"><span class="label">linkedin</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>&copy; Unkown</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</section>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	</body>
+	</html>
