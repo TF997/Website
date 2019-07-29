@@ -32,6 +32,7 @@
 	<!-- Three -->
 	<section id="three" class="main style1">
 		<div class="container">
+			<h2> Chart Last Updated: 4/6/19 at 22:22</h2>
 		  <canvas id="myChart"></canvas>
 		</div>
 
@@ -44,14 +45,14 @@
 		  Chart.defaults.global.defaultFontColor = 'black';
 
 		  let massPopChart = new Chart(myChart, {
-		    type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		    type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
 		    data:{
 		      labels:['Ben', 'Abi'],
 		      datasets:[{
 		        label:'',
 		        data:[
 		          0,
-			  0
+							1
 		        ],
 		        //backgroundColor:'green',
 		        backgroundColor:[
